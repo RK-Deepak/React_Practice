@@ -49,3 +49,10 @@ const throttleFN=useCallback(handleThrottleFn(handleFire,3000),[])
 }
 
 export default Throttle
+
+
+//we use usecallback because 
+// You're absolutely correct. The issue arises from the fact that the handleThrottleFn function is defined inside the component body. This means that every time the component re-renders, a new instance of handleThrottleFn is created, which results in the throttleFN function being recreated on every render, leading to incorrect behavior.
+
+// // To fix this, we need to ensure that handleThrottleFn is only created once, regardless of how many times the component re-renders. We can achieve this by moving the definition of handleThrottleFn outside of the component body, so it's only created once when the component is initially loaded.
+
