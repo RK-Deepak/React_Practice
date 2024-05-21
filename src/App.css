@@ -23,3 +23,19 @@
   flex-direction: column;
   gap: 10px;
 }
+.each_accod 
+{
+  width: 80%;
+  height: fit-content;
+  background-color: green;
+  padding: 10px;
+}
+.ques 
+{
+  display: flex;
+  justify-content: space-between;
+}
+.ans 
+{
+  
+}
