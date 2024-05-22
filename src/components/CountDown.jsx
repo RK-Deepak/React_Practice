@@ -20,7 +20,7 @@ function handleChange(e)
    const {name,value}=e.target;
    if (value.length <= 2 && /^\d*$/.test(value))
    {
-    setTime(prevTime=>({
+    setTime(prevTime=>({ 
       ...prevTime,
       [name]:value.padStart(1,"0")
  }))
